@@ -96,11 +96,10 @@
 .hero {
   /* background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
     url("./images/gym-1.jpg"); */
-  background-color: #f4ebef;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233b0d0d' fill-opacity='0.17' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  height: 100vh;
+  background-color: #e6e9f0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23001011' fill-opacity='0.1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-position: center;
-  background-size: cover;
+  height: 100vh;
   padding: 0.5rem calc((100vw - 1200px) / 2);
   display: flex;
   justify-content: flex-start;
@@ -113,7 +112,7 @@
   line-height: 1;
 }
 .hero_content h1 {
-  font-size: clamp(3rem, 8vw, 4rem);
+  font-size: clamp(2rem, 8vw, 3rem);
   font-family: "Edu NSW ACT Foundation", sans-serif;
   font-weight: bolder;
   /* text-transform: uppercase; */
@@ -123,11 +122,16 @@
   font-size: clamp(1rem, 4vw, 2rem);
   margin-top: 2rem;
   line-height: 1.2;
-  max-width: 60%;
+  width: 60%;
 }
 .hero_content .hero_top {
   font-size: clamp(1rem, 4vw, 2rem);
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .hero_content .hero_bottom {
+    width: 100%;
+  }
 }
 
 .button {
@@ -158,16 +162,14 @@
 }
 /* about section */
 .about {
-  background-color: #f4ebef;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233b0d0d' fill-opacity='0.17' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: #e6e9f0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23001011' fill-opacity='0.1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   height: 100vh;
-  background-position: center;
-  background-size: cover;
+  /* background-position: center; */
+  /* background-size: co; */
   text-align: center;
-  background-blend-mode: color-burn;
-  background-repeat: no-repeat;
   padding: 50px 0;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .about-heading {
@@ -192,11 +194,11 @@
 .skill-card {
   margin: 15px;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 0 0 10px 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   text-align: center;
-  width: calc(33% - 30px);
+  width: calc(30% - 30px);
 }
 
 .skill-card:hover {
@@ -205,6 +207,9 @@
 }
 
 .card-icon {
+  background-color: #02232567;
+  padding: 1rem;
+  border-radius: 100%;
   font-size: 2rem;
   margin-bottom: 10px;
   color: #333;
@@ -233,6 +238,71 @@
     width: 80%;
   }
 }
+.primary-button {
+  margin-top: 1rem;
+  font-family: "Ropa Sans", sans-serif;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  border: 1px solid #0e1822;
+  padding: 0.8rem 2.1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  background-color: #0e1822;
+  background-size: 200%;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
+  transition-property: background-position, border, color;
+  position: relative;
+  z-index: 1;
+}
+
+.primary-button:hover {
+  border: 1px solid #ff4655;
+  color: white;
+  background-position: 40%;
+}
+
+.primary-button:before {
+  content: "";
+  position: absolute;
+  background-color: #0e1822;
+  width: 0.2rem;
+  height: 0.2rem;
+  top: -1px;
+  left: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+.primary-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.primary-button:hover:before {
+  background-color: white;
+}
+
+.primary-button:hover:after {
+  background-color: white;
+}
+
+.primary-button:after {
+  content: "";
+  position: absolute;
+  background-color: #ff4655;
+  width: 0.3rem;
+  height: 0.3rem;
+  bottom: -1px;
+  right: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.shape {
+  fill: #0e1822;
+}
+
 /* contact section */
 main {
   padding: 70px;
